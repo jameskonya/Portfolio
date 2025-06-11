@@ -286,3 +286,8 @@ section {
     font-size: 0.8rem;
   }
 }
+.projects {
+  padding: 60px 20px 100px; /* previously: padding: 60px 20px; */
+  background: #f4f4f4;
+  text-align: center;
+}
