@@ -204,3 +204,31 @@
 .footer p {
   margin: 0;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    padding: 20px;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
