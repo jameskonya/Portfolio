@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Base Reset and Typography */
 * {
   margin: 0;
   padding: 0;
@@ -6,138 +6,107 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
   color: #333;
-}
-
-/* Navigation */
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header h1 {
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #00bcd4;
+  background: #f9f9f9;
 }
 
 /* Hero Section */
-#hero {
-  background: linear-gradient(to right, #00bcd4, #2196f3);
-  color: white;
+.hero {
+  background: #f5f7fa;
   padding: 100px 20px;
   text-align: center;
 }
 
-#hero h2 {
-  font-size: 2.8rem;
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 10px;
+  color: #333;
 }
 
-#hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
+.hero h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 15px;
 }
 
-/* Section Headings */
-section {
-  padding: 60px 20px;
-  text-align: center;
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #666;
 }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #222;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #005fa3;
 }
 
 /* About Section */
-#about p {
+.about {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about p {
   font-size: 1.1rem;
   color: #555;
-}
-
-/* Skills Section */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.skill {
-  background-color: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-weight: 500;
-  transition: transform 0.3s;
-}
-
-.skill:hover {
-  transform: scale(1.05);
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 /* Projects Section */
-#projects {
-  background-color: #f5f5f5;
+.projects {
+  background: #f4f4f4;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
 }
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
-  margin-top: 40px;
+  justify-content: center;
 }
 
 .project-card {
-  background-color: white;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 300px;
   padding: 20px;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -145,7 +114,6 @@ section h2 {
 .project-card h3 {
   font-size: 1.3rem;
   margin-bottom: 10px;
-  color: #222;
 }
 
 .project-card p {
@@ -153,115 +121,129 @@ section h2 {
   color: #444;
 }
 
-/* Contact Section */
-#contact p {
+/* Skills Section */
+.skills {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
   font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #444;
 }
 
-#contact a {
-  color: #2196f3;
-  text-decoration: none;
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
+}
+
+.contact-info p {
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 /* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  padding: 20px 10px;
+.footer {
+  background: #222;
+  color: #fff;
   text-align: center;
-  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.footer p {
+  margin: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .hero h1 {
+    font-size: 2rem;
   }
 
-  .projects-container,
-  .skills-container {
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .projects-container {
     flex-direction: column;
     align-items: center;
   }
 
   .project-card {
     width: 90%;
+    margin-bottom: 20px;
   }
-  /* Skills Section - Improve spacing and alignment */
-#skills ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 400px;
-}
 
-#skills ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-  justify-content: center;
-}
+  .contact {
+    padding: 20px;
+  }
 
-/* Contact Section Styles */
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  margin-top: 30px;
+  .footer {
+    font-size: 0.8rem;
+  }
 }
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-#contact textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-#contact button {
-  padding: 10px 25px;
-  font-size: 1rem;
-  background-color: #2196f3;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#contact button:hover {
-  background-color: #1976d2;
-}
-
-/* Contact Info (email, location) */
-.contact-info {
-  margin-top: 25px;
-  font-size: 1.05rem;
-  color: #444;
-}
-
-.contact-info p {
-  margin: 5px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
