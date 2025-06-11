@@ -194,4 +194,74 @@ footer {
   .project-card {
     width: 90%;
   }
+  /* Skills Section - Improve spacing and alignment */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
 }
+
+#skills ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+/* Contact Section Styles */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#contact textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#contact button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #1976d2;
+}
+
+/* Contact Info (email, location) */
+.contact-info {
+  margin-top: 25px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
